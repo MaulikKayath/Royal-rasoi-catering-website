@@ -958,6 +958,16 @@ body {
     overflow-x: hidden;
     min-height: 100vh;
 }
+/* ==================== NAVBAR HOVER EFFECT ==================== */
+
+.navbar__item a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar__item a:hover {
+    color: #edaa18 !important;
+    transform: scale(1.08);
+}
 
 
 
