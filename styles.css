@@ -712,90 +712,46 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ==================== RESPONSIVE DESIGN ==================== */
 
-@media (max-width: 1200px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .services-center {
-        order: -1;
-    }
-    
-    .about-grid {
-        grid-template-columns: 1fr 1fr !important;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* ==================== MOBILE FLEX & LAYOUT FIX ==================== */
 @media (max-width: 768px) {
-    .navbar {
-        position: relative;
-        top: 0;
-        padding: 20px;
-    }
-
-    .navbar__container {
+    /* Force all grid sections into neat vertical columns */
+    .services-grid,
+    .about-grid,
+    .contact-grid {
+        display: flex;
         flex-direction: column;
-        gap: 20px;
-    }
-    
-    .navbar__links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .hero {
-        padding-top: 150px;
-    }
-
-    .hero-title {
-        font-size: 60px;
-    }
-    
-    .hero-subtitle {
-        font-size: 24px;
-    }
-    
-    .hero-footer-container {
-        flex-direction: column;
+        align-items: center;
+        width: 100%;
         gap: 30px;
-        text-align: center;
+    }
+
+    /* Keep content safely inside the screen borders */
+    .container,
+    .hero-content {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    /* Stop images from pushing past the screen width */
+    .hero-image,
+    .service-image,
+    .about-custom-plate,
+    .gallery-item img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Scale down massive titles so they fit cleanly on a phone */
+    .hero-title {
+        font-size: 45px;
+        line-height: 1.1;
     }
     
     .section-title {
-        font-size: 48px;
+        font-size: 38px;
     }
-    
-    .services-subtitle {
-        font-size: 32px;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .about-stats {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-/* ==================== NAVBAR HOVER EFFECT ==================== */
-
-.navbar__item a {
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.navbar__item a:hover {
-    color: #edaa18 !important;
-    transform: scale(1.08);
 }
 /* ==================== PHOTO GLOW EFFECT ==================== */
 
