@@ -207,8 +207,7 @@ h1, h2, h3, h4, h5, h6 {
   height: var(--navbar-icon-avatar);
 }
 
-/* ── Responsive ── */
-
+/* ==================== RESPONSIVE DESIGN ==================== */
 @media (max-width: 1728px) {
   .navbar__container {
     max-width: 100%;
@@ -279,12 +278,6 @@ h1, h2, h3, h4, h5, h6 {
     --navbar-icon-avatar: 62px;
     --navbar-pill-padding-left: 74px;
     --navbar-pill-padding-right: 33px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    top: 20px;
   }
 }
 
@@ -710,11 +703,120 @@ h1, h2, h3, h4, h5, h6 {
     color: #999;
 }
 
-/* ==================== RESPONSIVE DESIGN ==================== */
+/* ==================== ALL YOUR ADDED EFFECTS (GLOW, LAYOUT, HOVER) ==================== */
 
-/* ==================== MOBILE FLEX & LAYOUT FIX ==================== */
-/* ==================== FIXED MOBILE ALIGNMENT & NAVBAR ==================== */
-/* ==================== FIXED MOBILE ALIGNMENT & NAVBAR ==================== */
+.hero-image,
+.service-image,
+.about-custom-plate,
+.gallery-item img {
+    box-shadow: 0 0 35px rgba(237, 170, 24, 0.3) !important;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Remove harsh box shadows and replace with a smooth, soft atmospheric glow */
+.hero-image,
+.service-image,
+.gallery-item img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    filter: drop-shadow(0 0 20px rgba(237, 170, 24, 0.3));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hero-image {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    box-shadow: none !important;
+    filter: drop-shadow(0 0 30px rgba(237, 170, 24, 0.4));
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.hero-image:hover {
+    filter: drop-shadow(0 0 40px rgba(237, 170, 24, 0.7));
+    transform: translateY(-3px);
+}
+
+.about-custom-plate {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0 35px rgba(237, 170, 24, 0.4));
+    box-shadow: none !important;
+}
+
+.hero-image:hover,
+.service-image:hover,
+.gallery-item:hover img {
+    filter: drop-shadow(0 0 35px rgba(237, 170, 24, 0.6));
+    transform: translateY(-3px);
+}
+
+/* Prevent flex containers from stretching children wide by default */
+section, 
+.hero, 
+.services, 
+.about, 
+.gallery, 
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container,
+.hero-content,
+.hero-footer-container,
+.services-grid,
+.about-grid,
+.gallery-grid,
+.contact-grid {
+    width: 100%;
+    max-width: 1300px; 
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.services-grid,
+.about-grid,
+.contact-grid,
+.gallery-grid {
+    align-items: center; 
+}
+
+html {
+    background-color: #4d0000; 
+    background-image: linear-gradient(135deg, #4d0000 0%, #800000 100%);
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: none; 
+}
+
+body {
+    margin: 0;
+    background: transparent; 
+    font-family: 'Montserrat', sans-serif;
+    color: #fff8e7;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.navbar__item a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar__item a:hover {
+    color: #edaa18 !important;
+    transform: scale(1.08);
+}
+
+
+/* ==================== FIXED MOBILE ALIGNMENT & NAVBAR (NOW SAFELY AT THE BOTTOM) ==================== */
 @media (max-width: 768px) {
     /* 1. AGGRESSIVELY KILL ALL HORIZONTAL SPACE */
     html, body {
@@ -747,11 +849,11 @@ h1, h2, h3, h4, h5, h6 {
         min-width: 0 !important;
         height: auto !important;
         min-height: 60px !important;
-        padding: 10px !important;
+        padding: 15px 10px !important;
         box-sizing: border-box;
     }
 
-    /* 3. THE CULPRIT: STRIP DESKTOP WIDTHS FROM LINKS */
+    /* 3. STRIP DESKTOP WIDTHS FROM LINKS & WRAP THEM SAFELY */
     .navbar__item--home,
     .navbar__item--services,
     .navbar__item--about,
@@ -765,15 +867,23 @@ h1, h2, h3, h4, h5, h6 {
         display: flex !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 12px !important; 
+        align-items: center !important;
+        gap: 10px 15px !important; 
         width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .navbar__item {
+        margin: 0 !important;
         padding: 0 !important;
     }
 
     .navbar__item a {
-        font-size: 15px !important; 
+        font-size: 16px !important; 
         height: auto !important;
         padding: 5px !important;
+        white-space: nowrap !important;
     }
 
     .navbar__actions {
@@ -828,8 +938,8 @@ h1, h2, h3, h4, h5, h6 {
         gap: 20px;
     }
 
-    /* 6. SCALE DOWN TEXT */
-    .hero { padding-top: 120px !important; }
+    /* 6. PUSH HERO DOWN AND SCALE TEXT SO NAVBAR DOESN'T HIDE IT */
+    .hero { padding-top: 190px !important; }
     .hero-title { font-size: 40px !important; line-height: 1.2; }
     .hero-subtitle { font-size: 20px !important; }
     .section-title { font-size: 32px !important; }
@@ -839,135 +949,3 @@ h1, h2, h3, h4, h5, h6 {
         gap: 15px;
     }
 }
-/* ==================== PHOTO GLOW EFFECT ==================== */
-
-.hero-image,
-.service-image,
-.about-custom-plate,
-.gallery-item img {
-    box-shadow: 0 0 35px rgba(237, 170, 24, 0.3) !important;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-/* ==================== CLEAN PHOTO GLOW FIX ==================== */
-
-/* Remove harsh box shadows and replace with a smooth, soft atmospheric glow */
-.hero-image,
-.service-image,
-.gallery-item img {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    filter: drop-shadow(0 0 20px rgba(237, 170, 24, 0.3));
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-/* For the plate image specifically, drop-shadow traces the actual shape of the image, eliminating the square box */
-.about-custom-plate {
-    max-width: 450px;
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: drop-shadow(0 0 35px rgba(237, 170, 24, 0.4));
-    box-shadow: none !important;
-}
-/* ==================== CLEAN IMAGE GLOW FIX ==================== */
-
-.hero-image {
-    max-width: 900px;
-    width: 100%;
-    height: auto;
-    border-radius: 40px;
-    box-shadow: none !important;
-    filter: drop-shadow(0 0 30px rgba(237, 170, 24, 0.4));
-    transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.hero-image:hover {
-    filter: drop-shadow(0 0 40px rgba(237, 170, 24, 0.7));
-    transform: translateY(-3px);
-}
-
-/* For the plate image specifically, drop-shadow traces the actual shape of the image, eliminating the square box */
-.about-custom-plate {
-    max-width: 450px;
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: drop-shadow(0 0 35px rgba(237, 170, 24, 0.4));
-    box-shadow: none !important;
-}
-
-.hero-image:hover,
-.service-image:hover,
-.gallery-item:hover img {
-    filter: drop-shadow(0 0 35px rgba(237, 170, 24, 0.6));
-    transform: translateY(-3px);
-}
-/* ==================== GLOBAL LAYOUT & STRETCH FIX ==================== */
-
-/* Prevent flex containers from stretching children wide by default */
-section, 
-.hero, 
-.services, 
-.about, 
-.gallery, 
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers all content and stops horizontal pulling */
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Ensure all primary content wrappers have a safe maximum width so they don't stretch on wide screens */
-.container,
-.hero-content,
-.hero-footer-container,
-.services-grid,
-.about-grid,
-.gallery-grid,
-.contact-grid {
-    width: 100%;
-    max-width: 1300px; /* Keeps your layout neatly boxed instead of stretching edge-to-edge */
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-}
-
-/* Fix grid stretching issues */
-.services-grid,
-.about-grid,
-.contact-grid,
-.gallery-grid {
-    align-items: center; /* Keeps grid items nicely aligned without stretching vertically */
-}
-/* ==================== SCROLL PERFORMANCE FIX ==================== */
-html {
-    background-color: #4d0000; /* Instantly loads this dark red so no white flashes appear */
-    background-image: linear-gradient(135deg, #4d0000 0%, #800000 100%);
-    min-height: 100vh;
-    scroll-behavior: smooth;
-    overscroll-behavior-y: none; /* Stops the white bounce effect at the top/bottom on phones */
-}
-
-body {
-    margin: 0;
-    background: transparent; /* Let HTML handle the background to stop rendering lag */
-    font-family: 'Montserrat', sans-serif;
-    color: #fff8e7;
-    overflow-x: hidden;
-    min-height: 100vh;
-}
-/* ==================== NAVBAR HOVER EFFECT ==================== */
-
-.navbar__item a {
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.navbar__item a:hover {
-    color: #edaa18 !important;
-    transform: scale(1.08);
-}
-
-
-
