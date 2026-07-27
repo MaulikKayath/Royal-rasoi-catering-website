@@ -899,3 +899,23 @@ section,
 .gallery-grid {
     align-items: center; /* Keeps grid items nicely aligned without stretching vertically */
 }
+/* ==================== SCROLL PERFORMANCE FIX ==================== */
+html {
+    background-color: #4d0000; /* Instantly loads this dark red so no white flashes appear */
+    background-image: linear-gradient(135deg, #4d0000 0%, #800000 100%);
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: none; /* Stops the white bounce effect at the top/bottom on phones */
+}
+
+body {
+    margin: 0;
+    background: transparent; /* Let HTML handle the background to stop rendering lag */
+    font-family: 'Montserrat', sans-serif;
+    color: #fff8e7;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+
+
