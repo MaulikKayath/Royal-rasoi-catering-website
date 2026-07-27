@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Rasoi - Luxury Catering</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <!-- TOP CURTAIN -->
+    <img src="./photos/project image internship.png" alt="Luxury Curtain" class="top-curtain">
+    
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar__container">
+          <nav class="navbar__nav" aria-label="Main navigation">
+            <div class="navbar__pill">
+              <ul class="navbar__links">
+                <li class="navbar__item navbar__item--home"><a href="#home">Home</a></li>
+                <li class="navbar__item navbar__item--services"><a href="#services">Services</a></li>
+                <li class="navbar__item navbar__item--about"><a href="#about">About</a></li>
+                <li class="navbar__item navbar__item--gallery"><a href="#gallery">Gallery</a></li>
+                <li class="navbar__item navbar__item--contact"><a href="#contact">Contact</a></li>
+              </ul>
+              <div class="navbar__actions">
+                <a href="#search" class="navbar__icon navbar__icon--search" aria-label="Search">
+                  <img src="https://www.figma.com/api/mcp/asset/9364d86b-e1c3-45db-8a0c-c0b265a2a11d" alt="" width="62" height="62">
+                </a>
+                <a href="#voice" class="navbar__icon navbar__icon--mic" aria-label="Voice search">
+                  <img src="https://www.figma.com/api/mcp/asset/c173ef0c-fcb1-44e9-96cf-9eebacc9b562" alt="" width="70" height="70">
+                </a>
+                <a href="#profile" class="navbar__icon navbar__icon--avatar" aria-label="Profile">
+                  <img src="https://www.figma.com/api/mcp/asset/79828b8d-7562-4ad7-a23e-cb48be4a3a79" alt="" width="62" height="62">
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+    <!-- Hero Content -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Royal Rasoi</h1>
+            <p class="hero-subtitle">Luxury Catering for Every Celebratio.</p>
+            
+            <div class="hero-image-container">
+                <!-- MAIN COLLAGE IMAGE -->
+                <img src="./photos/hero-main.png" alt="Catering showcase" class="hero-image">
+            </div>
+            
+            <p class="hero-bottom-text">Premium Catering for Weddings, Corporate Events & Private Celebrations.</p>
+        </div>
+    </section>
+    
+    <!-- Hero Footer -->
+    <section class="hero-footer">
+        <div class="hero-footer-container">
+            <div class="star-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+            </div>
+            <div class="cta-buttons">
+                <button class="btn btn-primary">Book Now</button>
+                <button class="btn btn-secondary">Explore Menu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 2: Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services →</h2>
+            <div class="services-grid">
+                <!-- Left Column - Images -->
+                <div class="services-column services-left">
+                    <div class="service-item">
+                        <img src="https://www.figma.com/api/mcp/asset/bdcc0ff8-ea47-41cc-8577-182743db8a01" alt="Wedding buffet" class="service-image">
+                        <p class="service-name">Wedding buffet</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://www.figma.com/api/mcp/asset/52dbc6ec-35f4-45f4-9bc4-554b03709cfb" alt="Birthday catering" class="service-image">
+                        <p class="service-name">Birthday catering</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://www.figma.com/api/mcp/asset/995de1bf-606e-4bdf-8eb4-91eca43f2668" alt="Private dining" class="service-image">
+                        <p class="service-name">Private dining</p>
+                    </div>
+                </div>
+
+                <!-- Center Column - Text & Box -->
+                <div class="services-column services-center">
+                    <h3 class="services-subtitle">For Every Celebration</h3>
+                    <p class="services-description">From intimate family gatherings to grand wedding receptions, we create unforgettable dining experiences with premium ingredients, elegant presentation, and flawless service.</p>
+                    <div class="features-box">
+                        <div class="feature-item"><i class="fas fa-check"></i> 500+ Successful Events</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Live Food Stations</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Professional Catering Team</div>
+                        <div class="feature-item"><i class="fas fa-check"></i> Fully Customized Menus</div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Images -->
+                <div class="services-column services-right">
+                    <div class="service-item">
+                        <img src="https://www.figma.com/api/mcp/asset/9259d093-528a-441f-92af-b1518af148b0" alt="Outdoor catering" class="service-image">
+                        <p class="service-name">Outdoor catering</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://www.figma.com/api/mcp/asset/e8509c73-2fb0-4201-8988-b105d9758007" alt="Festival food" class="service-image">
+                        <p class="service-name">Festival food</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://www.figma.com/api/mcp/asset/a8e37bfc-236f-45fc-8b77-f3ed4c242923" alt="Corporate lunch" class="service-image">
+                        <p class="service-name">Corporate lunch</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 3: About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About →</h2>
+            <p class="timeline-text">2015 Company Started | 2018 100+ Events | 2021 Expanded Services | 2025 500+ Successful Events</p>
+            <div class="about-grid">
+                <!-- Left Side - Plate Image -->
+                <div class="about-left">
+                    <img src="./photos/plate and fork.png" alt="Crafting Memorable Dining Experiences" class="about-custom-plate">
+                </div>
+
+                <!-- Right Side - Leadership Box -->
+                <div class="about-right">
+                    <div class="leadership-box">
+                        <h3 class="leadership-title">Meet Our Leadership</h3>
+                        <div class="leader-item">Founder — Maulik Kayath</div>
+                        <div class="leader-item">Co-Founder — Paras Saini</div>
+                        <div class="leader-item">CEO — Naman Awaasthy</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-stats">
+                <span>500+ Events</span>
+                <span>50K+ Guests Served</span>
+                <span>10+ Years of Experience</span>
+                <span>100% Customer Satisfaction</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 4: Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Gallery →</h2>
+            <p class="gallery-subtitle">A collection of memorable moments crafted with passion, elegance, and exceptional hospitality.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/0936c06d-d0b8-46c4-a036-5861413a7f64" alt="Gallery 1"></div>
+                <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/7d2cf974-ee38-48fe-ad93-f9f82502b9ab" alt="Gallery 2"></div>
+                <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/f5bdb8fc-fc4f-4b90-b4bd-3cc81c3b8807" alt="Gallery 3"></div>
+                <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/2fec87c5-f443-44a7-8038-ba0f35a59fa8" alt="Gallery 4"></div>
+                <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/bb5ee10a-4da5-4400-a82e-d9a4c8106c12" alt="Gallery 5"></div>
+                <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/950b6042-a9da-4de1-872f-1c259374eff8" alt="Gallery 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 5: Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact →</h2>
+            <div class="contact-grid">
+                <!-- Left Box - Contact Info -->
+                <div class="contact-box">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p class="contact-label">Address</p>
+                            <p class="contact-value">Jaipur, Rajasthan</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p class="contact-label">Phone</p>
+                            <p class="contact-value">+919461057009</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p class="contact-label">Email</p>
+                            <p class="contact-value">maulikkayath@company.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p class="contact-label">Working Hours</p>
+                            <p class="contact-value">Mon – Sun</p>
+                            <p class="contact-value">9:00 AM – 12:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Box - Form -->
+                <div class="contact-box">
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your full name">
+                        </div>
+                        <div class="form-row">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-row">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="+91">
+                        </div>
+                        <div class="form-row">
+                            <label>Event Type</label>
+                            <select>
+                                <option>Select Event Type ▼</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label>Message</label>
+                            <textarea placeholder="Tell us about your event..."></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
