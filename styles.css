@@ -949,3 +949,104 @@ body {
         gap: 15px;
     }
 }
+/* ==================== MINOR PROJECT ADDITIONS ==================== */
+
+/* 1. Search Bar */
+.navbar__search {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(237, 170, 24, 0.5);
+    border-radius: 30px;
+    padding: 8px 15px;
+    margin-right: 20px;
+}
+.navbar__search input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    width: 130px;
+}
+.navbar__search input::placeholder { color: #ddd; }
+.navbar__search i { color: #edaa18; }
+
+/* 2. Image Slider */
+.gallery-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 50px; 
+}
+.gallery-track-wrapper {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 20px;
+}
+.gallery-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+.gallery-track .gallery-item {
+    min-width: calc(33.333% - 13.33px); /* Shows exactly 3 images at once */
+    flex-shrink: 0;
+}
+.slider-btn {
+    background: #edaa18;
+    border: none;
+    color: #4d0000;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(237, 170, 24, 0.5);
+    transition: transform 0.3s ease;
+}
+.slider-btn:hover { transform: scale(1.1); }
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+/* 3. Footer */
+.site-footer {
+    background-color: rgba(40, 0, 0, 0.9);
+    border-top: 2px solid #edaa18;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    width: 100%;
+}
+.site-footer p {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff8e7;
+    font-size: 16px;
+}
+
+/* 4. Fix these new additions for Mobile */
+@media (max-width: 768px) {
+    .gallery-track .gallery-item {
+        min-width: 100% !important; /* Forces 1 image at a time on phones */
+    }
+    .gallery-slider-container {
+        padding: 0 45px !important;
+    }
+    .navbar__search {
+        width: 100% !important;
+        margin: 10px 0 !important;
+        justify-content: space-between;
+    }
+    .navbar__search input {
+        width: 100% !important;
+    }
+}
