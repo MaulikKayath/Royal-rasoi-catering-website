@@ -18,7 +18,7 @@
     <!-- TOP CURTAIN -->
     <img src="./photos/project image internship.png" alt="Luxury Curtain" class="top-curtain">
     
-    <!-- Navbar -->
+    <!-- Navbar with NEW Search Bar -->
     <header class="navbar">
         <div class="navbar__container">
           <nav class="navbar__nav" aria-label="Main navigation">
@@ -31,9 +31,12 @@
                 <li class="navbar__item navbar__item--contact"><a href="#contact">Contact</a></li>
               </ul>
               <div class="navbar__actions">
-                <a href="#search" class="navbar__icon navbar__icon--search" aria-label="Search">
-                  <img src="https://www.figma.com/api/mcp/asset/9364d86b-e1c3-45db-8a0c-c0b265a2a11d" alt="" width="62" height="62">
-                </a>
+                <!-- Minor Project Requirement: Functional Search Bar -->
+                <div class="navbar__search">
+                    <input type="text" id="searchInput" placeholder="Search menus...">
+                    <i class="fas fa-search"></i>
+                </div>
+                
                 <a href="#voice" class="navbar__icon navbar__icon--mic" aria-label="Voice search">
                   <img src="https://www.figma.com/api/mcp/asset/c173ef0c-fcb1-44e9-96cf-9eebacc9b562" alt="" width="70" height="70">
                 </a>
@@ -50,10 +53,9 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Royal Rasoi</h1>
-            <p class="hero-subtitle">Luxury Catering for Every Celebratio.</p>
+            <p class="hero-subtitle">Luxury Catering for Every Celebration.</p>
             
             <div class="hero-image-container">
-                <!-- MAIN COLLAGE IMAGE -->
                 <img src="./photos/hero-main.png" alt="Catering showcase" class="hero-image">
             </div>
             
@@ -78,12 +80,11 @@
         </div>
     </section>
 
-    <!-- Step 2: Services Section -->
+    <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">Our Services →</h2>
             <div class="services-grid">
-                <!-- Left Column - Images -->
                 <div class="services-column services-left">
                     <div class="service-item">
                         <img src="https://www.figma.com/api/mcp/asset/bdcc0ff8-ea47-41cc-8577-182743db8a01" alt="Wedding buffet" class="service-image">
@@ -99,7 +100,6 @@
                     </div>
                 </div>
 
-                <!-- Center Column - Text & Box -->
                 <div class="services-column services-center">
                     <h3 class="services-subtitle">For Every Celebration</h3>
                     <p class="services-description">From intimate family gatherings to grand wedding receptions, we create unforgettable dining experiences with premium ingredients, elegant presentation, and flawless service.</p>
@@ -111,7 +111,6 @@
                     </div>
                 </div>
 
-                <!-- Right Column - Images -->
                 <div class="services-column services-right">
                     <div class="service-item">
                         <img src="https://www.figma.com/api/mcp/asset/9259d093-528a-441f-92af-b1518af148b0" alt="Outdoor catering" class="service-image">
@@ -130,18 +129,15 @@
         </div>
     </section>
 
-    <!-- Step 3: About Section -->
+    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About →</h2>
             <p class="timeline-text">2015 Company Started | 2018 100+ Events | 2021 Expanded Services | 2025 500+ Successful Events</p>
             <div class="about-grid">
-                <!-- Left Side - Plate Image -->
                 <div class="about-left">
                     <img src="./photos/plate and fork.png" alt="Crafting Memorable Dining Experiences" class="about-custom-plate">
                 </div>
-
-                <!-- Right Side - Leadership Box -->
                 <div class="about-right">
                     <div class="leadership-box">
                         <h3 class="leadership-title">Meet Our Leadership</h3>
@@ -160,28 +156,35 @@
         </div>
     </section>
 
-    <!-- Step 4: Gallery Section -->
+    <!-- NEW Image Slider Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="container">
             <h2 class="section-title">Our Gallery →</h2>
             <p class="gallery-subtitle">A collection of memorable moments crafted with passion, elegance, and exceptional hospitality.</p>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/0936c06d-d0b8-46c4-a036-5861413a7f64" alt="Gallery 1"></div>
-                <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/7d2cf974-ee38-48fe-ad93-f9f82502b9ab" alt="Gallery 2"></div>
-                <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/f5bdb8fc-fc4f-4b90-b4bd-3cc81c3b8807" alt="Gallery 3"></div>
-                <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/2fec87c5-f443-44a7-8038-ba0f35a59fa8" alt="Gallery 4"></div>
-                <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/bb5ee10a-4da5-4400-a82e-d9a4c8106c12" alt="Gallery 5"></div>
-                <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/950b6042-a9da-4de1-872f-1c259374eff8" alt="Gallery 6"></div>
+            
+            <div class="gallery-slider-container">
+                <button class="slider-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <div class="gallery-track-wrapper">
+                    <div class="gallery-track" id="galleryTrack">
+                        <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/0936c06d-d0b8-46c4-a036-5861413a7f64" alt="Gallery 1"></div>
+                        <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/7d2cf974-ee38-48fe-ad93-f9f82502b9ab" alt="Gallery 2"></div>
+                        <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/f5bdb8fc-fc4f-4b90-b4bd-3cc81c3b8807" alt="Gallery 3"></div>
+                        <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/2fec87c5-f443-44a7-8038-ba0f35a59fa8" alt="Gallery 4"></div>
+                        <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/bb5ee10a-4da5-4400-a82e-d9a4c8106c12" alt="Gallery 5"></div>
+                        <div class="gallery-item"><img src="https://www.figma.com/api/mcp/asset/950b6042-a9da-4de1-872f-1c259374eff8" alt="Gallery 6"></div>
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
             </div>
+
         </div>
     </section>
 
-    <!-- Step 5: Contact Section -->
+    <!-- Contact Section with Form Validation -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Contact →</h2>
             <div class="contact-grid">
-                <!-- Left Box - Contact Info -->
                 <div class="contact-box">
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -214,35 +217,47 @@
                     </div>
                 </div>
 
-                <!-- Right Box - Form -->
                 <div class="contact-box">
-                    <form class="contact-form">
+                    <form class="contact-form" id="contactForm">
                         <div class="form-row">
                             <label>Full Name</label>
-                            <input type="text" placeholder="Enter your full name">
+                            <input type="text" id="fullName" placeholder="Enter your full name" required minlength="3">
                         </div>
                         <div class="form-row">
                             <label>Email Address</label>
-                            <input type="email" placeholder="Enter your email">
+                            <input type="email" id="emailAddress" placeholder="Enter your email" required>
                         </div>
                         <div class="form-row">
                             <label>Phone Number</label>
-                            <input type="tel" placeholder="+91">
+                            <input type="tel" id="phoneNumber" placeholder="+91" required pattern="[0-9]{10}">
                         </div>
                         <div class="form-row">
                             <label>Event Type</label>
-                            <select>
-                                <option>Select Event Type ▼</option>
+                            <select required>
+                                <option value="">Select Event Type ▼</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="party">Private Party</option>
                             </select>
                         </div>
                         <div class="form-row">
                             <label>Message</label>
-                            <textarea placeholder="Tell us about your event..."></textarea>
+                            <textarea id="message" placeholder="Tell us about your event..." required></textarea>
                         </div>
+                        <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Send Inquiry</button>
                     </form>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- NEW Footer Section -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Royal Rasoi. All Rights Reserved. Designed by Maulik.</p>
+    </footer>
+
+</body>
+</html>
     </section>
 
 </body>
