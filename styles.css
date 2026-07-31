@@ -841,3 +841,14 @@ section,
     .cta-container h2 { font-size: 32px !important; }
     .steps-grid { grid-template-columns: 1fr !important; }
 }
+/* ==================== MIC ICON PROPORTION FIX ==================== */
+.navbar__icon--mic {
+    width: 40px !important; /* Forces it to be a proper narrow proportion instead of wide */
+    height: 62px !important; /* Matches the height of the avatar and search icons */
+}
+
+.navbar__icon--mic img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important; /* Prevents the image from distorting */
+}
