@@ -740,3 +740,28 @@ section,
     
     .cta-container h2 { font-size: 32px !important; }
 }
+/* ==================== 15. GLOBAL TEXT CENTERING FIX ==================== */
+section h1, 
+section h2, 
+section h3, 
+section h4, 
+section p, 
+.section-title, 
+.hero-subtitle, 
+.hero-bottom-text, 
+.gallery-subtitle, 
+.timeline-text,
+.services-center,
+.cta-container {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Ensures text inside text-boxes stays neatly aligned */
+.services-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center !important;
+}
