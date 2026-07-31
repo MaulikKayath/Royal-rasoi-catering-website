@@ -758,20 +758,13 @@ section p,
     margin-right: auto !important;
 }
 
-/* Ensures text inside text-boxes stays neatly aligned */
-.services-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* ==================== 17. BULLETPROOF GALLERY SUBTITLE FIX ==================== */
+#gallery .gallery-subtitle,
+section#gallery p.gallery-subtitle {
     text-align: center !important;
-}
-/* ==================== 16. GALLERY SUBTITLE CENTER FIX ==================== */
-.gallery .container, 
-.gallery-subtitle {
-    text-align: center !important;
+    width: 100% !important;
+    max-width: 900px !important;
+    display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
 }
