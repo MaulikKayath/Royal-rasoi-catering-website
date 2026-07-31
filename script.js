@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- IMAGE SLIDER ---
+    // --- IMAGE SLIDER (WITH AUTO-SLIDE) ---
     const track = document.getElementById("galleryTrack");
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
@@ -124,6 +124,22 @@ document.addEventListener("DOMContentLoaded", () => {
             // Gap is 20px, so we calculate that into the slide distance
             track.style.transform = `translateX(-${currentIndex * (itemWidth + 20)}px)`;
         }
+
+        // NEW: Automatic Sliding Feature
+        function autoSlide() {
+            const itemsPerView = getItemsPerView();
+            const totalItems = track.children.length;
+            
+            if (currentIndex < totalItems - itemsPerView) {
+                currentIndex++; // Move to the next image
+            } else {
+                currentIndex = 0; // Reset back to the first image
+            }
+            updateSlider();
+        }
+
+        // Run the autoSlide function automatically every 3 seconds (3000 milliseconds)
+        setInterval(autoSlide, 3000);
 
         // Reset slider if the screen rotates or resizes
         window.addEventListener("resize", () => {
