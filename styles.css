@@ -765,3 +765,13 @@ section p,
     align-items: center;
     text-align: center !important;
 }
+/* ==================== 16. GALLERY SUBTITLE CENTER FIX ==================== */
+.gallery .container, 
+.gallery-subtitle {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
