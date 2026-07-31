@@ -298,18 +298,20 @@ section,
 .about-stats span { font-size: 20px; color: #edaa18; }
 
 /* ==================== 9. GALLERY SECTION & SLIDER FIXES ==================== */
-.gallery { padding: 100px 0; min-height: 100vh; }
+.gallery { padding: 100px 0; min-height: auto; }
 .gallery-subtitle { font-size: 24px; margin-bottom: 60px; line-height: 1.8; max-width: 900px; text-align: center; }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 
-/* Bulletproof Gallery Item Cage */
+/* Bulletproof Gallery Item Cage - PERFECT SQUARES */
 .gallery-item { 
     border: 3px solid #edaa18; 
     border-radius: 20px; 
     overflow: hidden; 
     display: block; 
-    height: 300px; /* Forces exact height */
     width: 100%;
+    max-width: 350px; 
+    margin: 0 auto; 
+    aspect-ratio: 1 / 1; /* PERFECT SQUARE RATIO */
     position: relative;
     box-shadow: none !important;
     filter: drop-shadow(0 0 30px rgba(237, 170, 24, 0.4));
@@ -323,8 +325,8 @@ section,
 
 .gallery-item img { 
     width: 100%; 
-    height: 100% !important; /* Forces image to obey the cage */
-    object-fit: cover !important; /* Crops cleanly */
+    height: 100% !important; 
+    object-fit: cover !important; 
     border-radius: 0; 
     display: block;
 }
@@ -387,7 +389,7 @@ section,
     overflow: hidden;
     width: 100%;
     border-radius: 20px;
-    padding: 20px 0; /* Gives space for the glowing drop-shadow */
+    padding: 20px 0; 
 }
 .gallery-track {
     display: flex;
@@ -716,10 +718,11 @@ section,
         gap: 15px;
     }
 
-    /* 7. PERFECT MOBILE SLIDER SETTINGS */
+    /* 7. PERFECT MOBILE SLIDER SETTINGS (SMALL CRISP SQUARES) */
     .gallery-track .gallery-item {
         min-width: 100% !important;
-        height: 250px !important; /* Slightly smaller height on phones so it fits nicely */
+        max-width: 350px !important; 
+        margin: 0 auto !important; 
     }
     
     .gallery-slider-container {
