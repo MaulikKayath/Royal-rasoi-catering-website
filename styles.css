@@ -316,7 +316,6 @@ section,
 }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 
-/* Bulletproof Gallery Item Cage - PERFECT SQUARES */
 .gallery-item { 
     border: 3px solid #edaa18; 
     border-radius: 20px; 
@@ -325,7 +324,7 @@ section,
     width: 100%;
     max-width: 350px; 
     margin: 0 auto; 
-    aspect-ratio: 1 / 1; /* PERFECT SQUARE RATIO */
+    aspect-ratio: 1 / 1; 
     position: relative;
     box-shadow: none !important;
     filter: drop-shadow(0 0 30px rgba(237, 170, 24, 0.4));
@@ -370,7 +369,7 @@ section,
 
 /* ==================== 11. MINOR PROJECT ADDITIONS ==================== */
 
-/* Search Bar */
+/* Desktop Search Bar */
 .navbar__search {
     display: flex;
     align-items: center;
@@ -391,6 +390,11 @@ section,
 }
 .navbar__search input::placeholder { color: #ddd; }
 .navbar__search i { color: #edaa18; }
+
+/* Hidden by default on desktop, shown on mobile */
+.mobile-search-float {
+    display: none; 
+}
 
 /* Image Slider */
 .gallery-slider-container {
@@ -455,7 +459,6 @@ section,
 
 /* ==================== 12. NEW AI ELEMENTS (PARAS STYLE INTEGRATION) ==================== */
 
-/* Steps Section */
 .steps-section { padding: 80px 0; }
 .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; width: 100%; }
 .step-card {
@@ -485,7 +488,6 @@ section,
 .step-card h3 { font-size: 24px; margin-bottom: 10px; color: #4d0000; }
 .step-card p { font-size: 15px; color: #555; line-height: 1.5; }
 
-/* Comparison Table Section */
 .comparison-section { padding: 80px 0; }
 .table-container {
     width: 100%;
@@ -520,7 +522,6 @@ section,
 .royal-table tr:last-child td { border-bottom: none; }
 .royal-table tr:hover { background-color: rgba(237, 170, 24, 0.1); }
 
-/* Packages Section */
 .packages { padding: 100px 0; min-height: 100vh; }
 .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; width: 100%; }
 .package-card {
@@ -546,7 +547,6 @@ section,
 .package-card.gold-tier li { border-bottom: 1px solid rgba(77,0,0,0.2); }
 .package-card.gold-tier:hover { transform: scale(1.05) translateY(-10px); }
 
-/* Testimonials Section */
 .testimonials { padding: 100px 0; min-height: 80vh; }
 .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; width: 100%; }
 .testi-card {
@@ -561,7 +561,6 @@ section,
 .testi-text { font-size: 18px; line-height: 1.6; font-style: italic; margin-bottom: 20px; }
 .testi-name { font-size: 22px; color: #edaa18; font-family: 'Cormorant Garamond', serif; }
 
-/* CTA Banner */
 .cta-banner {
     width: 100%;
     background: rgba(0, 0, 0, 0.3);
@@ -573,7 +572,7 @@ section,
 .cta-container h2 { font-size: 48px; margin-bottom: 20px; color: #edaa18; }
 .cta-container p { font-size: 24px; margin-bottom: 30px; }
 
-/* Floating WhatsApp */
+/* Floating WhatsApp Button */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -669,7 +668,7 @@ section,
     .steps-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ==================== 14. FIXED MOBILE ALIGNMENT & NAVBAR ==================== */
+/* ==================== 14. FIXED MOBILE ALIGNMENT & FLOATING SEARCH ==================== */
 @media (max-width: 768px) {
     html, body {
         overflow-x: hidden !important;
@@ -735,9 +734,37 @@ section,
         white-space: nowrap !important;
     }
 
+    /* Hide desktop icons since they clutter mobile */
     .navbar__actions {
         display: none !important;
     }
+
+    /* SHOW FLOATING SEARCH BAR ON PHONES (Opposite side of WhatsApp) */
+    .mobile-search-float {
+        display: flex !important;
+        position: fixed;
+        bottom: 30px;
+        left: 20px;
+        background: rgba(77, 0, 0, 0.95);
+        border: 2px solid #edaa18;
+        border-radius: 30px;
+        padding: 8px 12px;
+        align-items: center;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        z-index: 1000;
+        max-width: 200px;
+    }
+    .mobile-search-float input {
+        background: transparent;
+        border: none;
+        color: #fff8e7;
+        outline: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        width: 130px;
+    }
+    .mobile-search-float input::placeholder { color: #f0d5a0; }
+    .mobile-search-float i { color: #edaa18; font-size: 16px; margin-left: 5px; }
 
     section, 
     .hero, 
@@ -809,15 +836,6 @@ section,
     
     .gallery-slider-container {
         padding: 0 45px !important;
-    }
-    
-    .navbar__search {
-        width: 100% !important;
-        margin: 10px 0 !important;
-        justify-content: space-between;
-    }
-    .navbar__search input {
-        width: 100% !important;
     }
     
     .cta-container h2 { font-size: 32px !important; }
