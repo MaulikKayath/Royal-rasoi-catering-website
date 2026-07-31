@@ -198,13 +198,13 @@ section,
 .navbar__icon--mic { width: var(--navbar-icon-mic); height: var(--navbar-icon-mic); margin-right: var(--navbar-gap-mic-avatar); }
 .navbar__icon--avatar { width: var(--navbar-icon-avatar); height: var(--navbar-icon-avatar); }
 
-/* ==================== 5. CLEAN IMAGE GLOW FIX & YELLOW RIBBON ==================== */
+/* ==================== 5. CLEAN IMAGE GLOW FIX ==================== */
 .hero-image,
 .service-image,
 .gallery-item img {
     height: auto;
     object-fit: contain; 
-    border-radius: 20px !important; /* Adjusted so the inner image fits smoothly inside the white card */
+    border-radius: 40px;
     box-shadow: none !important;
     filter: drop-shadow(0 0 30px rgba(237, 170, 24, 0.4));
     transition: filter 0.3s ease, transform 0.3s ease;
@@ -227,19 +227,6 @@ section,
     filter: drop-shadow(0 0 40px rgba(237, 170, 24, 0.7));
     transform: translateY(-3px);
 }
-
-/* UPGRADED PHOTO RIBBONS (WHITE CARD EFFECT) */
-.hero-image,
-.service-image,
-.about-custom-plate,
-.gallery-item {
-    background-color: #ffffff !important; /* Solid white background */
-    padding: 15px !important; /* Neat white frame */
-    border-left: 12px solid #edaa18 !important; /* Golden ribbon attached to the straight frame */
-    border-radius: 35px !important; /* Smooth outer card edges */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important; /* Drop shadow behind the card */
-}
-
 
 /* ==================== 6. HERO SECTION ==================== */
 .hero {
@@ -282,7 +269,6 @@ section,
 .features-box { 
     background: #edaa18; 
     border-radius: 30px; 
-    border-left: 10px solid #ffffff; /* NEW WHITE RIBBON */
     padding: 40px; 
     width: 100%; 
     box-shadow: 0 0 30px rgba(237, 170, 24, 0.3); 
@@ -299,7 +285,6 @@ section,
 .leadership-box { 
     background: #edaa18; 
     border-radius: 40px; 
-    border-left: 10px solid #ffffff; /* NEW WHITE RIBBON */
     padding: 50px; 
     width: 100%; 
     max-width: 450px; 
@@ -316,9 +301,7 @@ section,
 .gallery-subtitle { font-size: 24px; margin-bottom: 60px; line-height: 1.8; max-width: 900px; text-align: center; }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .gallery-item { 
-    /* Removed the old full border and added the ribbon */
-    border: none;
-    border-left: 10px solid #edaa18; /* NEW YELLOW RIBBON */
+    border: 3px solid #edaa18;
     border-radius: 20px; 
     overflow: visible; 
     display: flex; 
@@ -333,7 +316,6 @@ section,
 .contact-box { 
     background: #edaa18; 
     border-radius: 40px; 
-    border-left: 10px solid #ffffff; /* NEW WHITE RIBBON */
     padding: 50px; 
     box-shadow: 0 0 40px rgba(237, 170, 24, 0.3); 
 }
@@ -629,7 +611,7 @@ section,
         gap: 15px;
     }
 
-    /* 7. NEW SLIDER RESPONSIVE RULES */
+    /* 7. SLIDER RESPONSIVE RULES */
     .gallery-track .gallery-item {
         min-width: 100% !important;
     }
@@ -643,20 +625,5 @@ section,
     }
     .navbar__search input {
         width: 100% !important;
-    }
-
-    /* 8. NEW: RIBBONS SHIFT TO TOP FOR PHONES */
-    .features-box,
-    .leadership-box,
-    .contact-box {
-        border-left: none !important;
-        border-top: 10px solid #ffffff !important;
-    }
-    .hero-image,
-    .service-image,
-    .about-custom-plate,
-    .gallery-item {
-        border-left: none !important;
-        border-top: 10px solid #edaa18 !important;
     }
 }
