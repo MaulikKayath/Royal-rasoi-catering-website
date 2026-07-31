@@ -204,7 +204,7 @@ section,
 .gallery-item img {
     height: auto;
     object-fit: contain; 
-    border-radius: 40px;
+    border-radius: 20px !important; /* Adjusted so the inner image fits smoothly inside the white card */
     box-shadow: none !important;
     filter: drop-shadow(0 0 30px rgba(237, 170, 24, 0.4));
     transition: filter 0.3s ease, transform 0.3s ease;
@@ -228,12 +228,16 @@ section,
     transform: translateY(-3px);
 }
 
-/* NEW YELLOW RIBBONS FOR PHOTOS */
+/* UPGRADED PHOTO RIBBONS (WHITE CARD EFFECT) */
 .hero-image,
 .service-image,
 .about-custom-plate,
 .gallery-item {
-    border-left: 10px solid #edaa18; /* The golden ribbon effect on the left */
+    background-color: #ffffff !important; /* Solid white background */
+    padding: 15px !important; /* Neat white frame */
+    border-left: 12px solid #edaa18 !important; /* Golden ribbon attached to the straight frame */
+    border-radius: 35px !important; /* Smooth outer card edges */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important; /* Drop shadow behind the card */
 }
 
 
