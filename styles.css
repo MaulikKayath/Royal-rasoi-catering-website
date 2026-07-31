@@ -207,7 +207,7 @@ section,
 /* ==================== 5. CLEAN IMAGE GLOW FIX ==================== */
 .hero-image,
 .service-image,
-.gallery-item img {
+.about-custom-plate {
     height: auto;
     object-fit: contain; 
     border-radius: 40px;
@@ -219,16 +219,11 @@ section,
 .about-custom-plate {
     max-width: 450px;
     width: 100%;
-    height: auto;
     display: block;
-    box-shadow: none !important;
-    filter: drop-shadow(0 0 35px rgba(237, 170, 24, 0.4));
-    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .hero-image:hover,
 .service-image:hover,
-.gallery-item:hover img,
 .about-custom-plate:hover {
     filter: drop-shadow(0 0 40px rgba(237, 170, 24, 0.7));
     transform: translateY(-3px);
@@ -302,19 +297,37 @@ section,
 .about-stats { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; padding: 40px 0; border-top: 1px solid rgba(237, 170, 24, 0.3); width: 100%; }
 .about-stats span { font-size: 20px; color: #edaa18; }
 
-/* ==================== 9. GALLERY SECTION ==================== */
+/* ==================== 9. GALLERY SECTION & SLIDER FIXES ==================== */
 .gallery { padding: 100px 0; min-height: 100vh; }
 .gallery-subtitle { font-size: 24px; margin-bottom: 60px; line-height: 1.8; max-width: 900px; text-align: center; }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+
+/* Bulletproof Gallery Item Cage */
 .gallery-item { 
     border: 3px solid #edaa18; 
     border-radius: 20px; 
-    overflow: visible; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
+    overflow: hidden; 
+    display: block; 
+    height: 300px; /* Forces exact height */
+    width: 100%;
+    position: relative;
+    box-shadow: none !important;
+    filter: drop-shadow(0 0 30px rgba(237, 170, 24, 0.4));
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
-.gallery-item img { width: 100%; border-radius: 17px; }
+
+.gallery-item:hover {
+    filter: drop-shadow(0 0 40px rgba(237, 170, 24, 0.7));
+    transform: translateY(-3px);
+}
+
+.gallery-item img { 
+    width: 100%; 
+    height: 100% !important; /* Forces image to obey the cage */
+    object-fit: cover !important; /* Crops cleanly */
+    border-radius: 0; 
+    display: block;
+}
 
 /* ==================== 10. CONTACT SECTION ==================== */
 .contact { padding: 100px 0; min-height: 100vh; }
@@ -374,6 +387,7 @@ section,
     overflow: hidden;
     width: 100%;
     border-radius: 20px;
+    padding: 20px 0; /* Gives space for the glowing drop-shadow */
 }
 .gallery-track {
     display: flex;
@@ -534,13 +548,13 @@ section,
   .navbar__container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .navbar__pill { width: var(--navbar-pill-width); min-width: var(--navbar-pill-width); }
   
-  .services-grid, .packages-grid, .testimonials-grid { grid-template-columns: 1fr; } /* Stack new grids on mobile */
+  .services-grid, .packages-grid, .testimonials-grid { grid-template-columns: 1fr; }
   .services-center { order: -1; }
   .about-grid { grid-template-columns: 1fr 1fr !important; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
   
-  .package-card.gold-tier { transform: scale(1); } /* Remove scale on mobile so it fits screen */
+  .package-card.gold-tier { transform: scale(1); } 
   .package-card.gold-tier:hover { transform: translateY(-5px); }
 
   :root {
@@ -679,8 +693,7 @@ section,
     /* 5. KEEP IMAGES INSIDE THE SCREEN */
     .hero-image,
     .service-image,
-    .about-custom-plate,
-    .gallery-item img {
+    .about-custom-plate {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
@@ -703,13 +716,16 @@ section,
         gap: 15px;
     }
 
-    /* 7. SLIDER RESPONSIVE RULES */
+    /* 7. PERFECT MOBILE SLIDER SETTINGS */
     .gallery-track .gallery-item {
         min-width: 100% !important;
+        height: 250px !important; /* Slightly smaller height on phones so it fits nicely */
     }
+    
     .gallery-slider-container {
         padding: 0 45px !important;
     }
+    
     .navbar__search {
         width: 100% !important;
         margin: 10px 0 !important;
