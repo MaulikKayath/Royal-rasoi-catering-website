@@ -889,5 +889,5 @@ section,
 }
 .curtain-overlay.open {
     pointer-events: none;
-     visibility: hidden;
+    
 }
