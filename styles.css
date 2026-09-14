@@ -887,3 +887,6 @@ section,
 .curtain-overlay.open .curtain-right {
     transform: translateX(100%);
 }
+.curtain-overlay.open {
+    pointer-events: none;
+}
