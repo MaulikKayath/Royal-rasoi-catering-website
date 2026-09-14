@@ -876,3 +876,7 @@ section,
 .curtain-right {
     right: 0;
 }
+.curtain-left,
+.curtain-right {
+    transition: transform 1.5s ease-in-out;
+}
