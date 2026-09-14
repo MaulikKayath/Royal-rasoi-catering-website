@@ -867,6 +867,7 @@ section,
     position: absolute;
     top: 0;
     height: 100%;
+    width: 55%;
 }
 .curtain-left {
     left: 0;
