@@ -58,6 +58,11 @@ if (heroSection) {
 // ==================== 2. NEW MINOR PROJECT FEATURES ====================
 
 document.addEventListener("DOMContentLoaded", () => {
+    // curtain   
+    const curtainOverlay = document.querySelector(".curtain-overlay");
+    curtainOverlay.addEventListener("click", () => {
+    curtainOverlay.classList.add("open");
+});
     
     // --- FORM VALIDATION & SUBMISSION (Combined safely) ---
     const contactForm = document.getElementById("contactForm");
