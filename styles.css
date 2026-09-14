@@ -880,3 +880,10 @@ section,
 .curtain-right {
     transition: transform 1.5s ease-in-out;
 }
+.curtain-overlay.open .curtain-left {
+    transform: translateX(-100%);
+}
+
+.curtain-overlay.open .curtain-right {
+    transform: translateX(100%);
+}
