@@ -868,3 +868,10 @@ section,
     top: 0;
     height: 100%;
 }
+.curtain-left {
+    left: 0;
+}
+
+.curtain-right {
+    right: 0;
+}
