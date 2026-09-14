@@ -59,13 +59,13 @@ if (heroSection) {
 
 document.addEventListener("DOMContentLoaded", () => {
     // curtain   
-    const curtainOverlay = document.querySelector(".curtain-overlay");
-    const curtainBlack = document.querySelector(".curtain-black");
-    curtainOverlay.addEventListener("click", () => {
+  const curtainOverlay = document.querySelector(".curtain-overlay");
+const curtainBlack = document.querySelector(".curtain-black");
+
+curtainOverlay.addEventListener("click", () => {
     curtainOverlay.classList.add("open");
-        setTimeout(() => {
     curtainBlack.style.opacity = "0";
-}, 1500);
+});
 });
     
     // --- FORM VALIDATION & SUBMISSION (Combined safely) ---
