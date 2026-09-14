@@ -899,3 +899,11 @@ section,
     height: 100%;
     background: black;
 }
+.curtain-black {
+    z-index: 1;
+}
+
+.curtain-left,
+.curtain-right {
+    z-index: 2;
+}
