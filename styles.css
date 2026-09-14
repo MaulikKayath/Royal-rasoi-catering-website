@@ -862,3 +862,9 @@ section,
     height: 100vh;
     z-index: 9999;
 }
+.curtain-left,
+.curtain-right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
